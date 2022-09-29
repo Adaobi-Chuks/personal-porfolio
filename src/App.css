@@ -54,6 +54,10 @@ html, body {
   .right-inner {
     padding: 40px;
   }
+
+  .left {
+    padding-bottom: -50px !important;
+  }
 }
   
 .left .info {
@@ -81,7 +85,7 @@ html, body {
   }
 
   .right {
-    margin-top: 650px;
+    margin-top: 645px;
   }
 
   .left, .right {
