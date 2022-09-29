@@ -1,38 +1,174 @@
-.App {
+@font-face {
+  font-family: RubikB;
+  src: url('./asset/font/Rubik-ExtraBold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+	font-family: PopinsB;
+	src: url('./asset/font/Poppins-ExtraBold.ttf');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: PopinsL;
+	src: url('./asset/font/Poppins-Medium.ttf');
+	font-weight: 700;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.3px;
+}
+
+.left,
+.right {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.left {
+  font-family: RubikB;
+  background-image: url("./asset/img/bg-image.jpg");
+  opacity: 1.5;
+  background-size: 100%;
+  color: #FFF;
+  width: 50%;
+  height: 100%;
+  float: left;
   text-align: center;
+  overflow: hidden;
+  position: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.left-inner,
+.right-inner {
+  padding: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 400px) {
+  .left-inner,
+  .right-inner {
+    padding: 40px;
+  }
+}
+  
+.left .info {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  flex: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50%;
+}
+
+.name {
+  font-size: 40px;
+}
+
+@media screen and (max-width: 1000px) {
+  .left .info {
+    margin-top: 300px;
+  }
+
+  .right {
+    margin-top: 650px;
+  }
+
+  .left, .right {
+    display: block;
+    width: 100%;
+  }
+  .left {
+    position:absolute;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.left .info .social-links {
+  margin-top: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.left .info .social-links .link {
+  padding: 35px;
+  font-size: xx-large;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.right {
+  float: right;
+  background-color:lightgrey;
+}
+
+.right a.resume {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px 0px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  color: darkslategrey;
+  text-decoration: none;
+  font-family: RubikB;
+}
+
+.right a.resume:hover {
+  background-color: #f1f1f1;
+  text-decoration: none;
+  color: rgb(34, 31, 34);
+}
+
+.right a.resume .resume-link {
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: #2A54F5;
+  background-clip: text;
+  text-decoration: none;
+}
+
+.title {
+  margin-top: 40px;
+  margin-bottom: 5px;
+  color: #674747;
+  font-family: 'PopinsB';
+  text-transform: uppercase;
+}
+
+a {
+  color: rgb(34, 35, 110);
+ text-decoration: none;
+}
+
+a:hover {
+  color: rgb(153, 12, 111);
+}
+
+.content {
+  font-family: 'PopinsL';
+  font-size: 15px;
+}
+
+.topic {
+  font-family: 'PopinsB';
+  font-weight: 50px;
+}
+
+.link {
+  color: rgb(75, 188, 223);
+ text-decoration: none;
+}
+
+.link:hover {
+  color: rgb(10, 9, 10);
 }
